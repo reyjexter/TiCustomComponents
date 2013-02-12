@@ -30,7 +30,7 @@ var CustomPickerClass = function(opts) {
 			zIndex: 9999
 		});
 		
-		var pickerObj = Ti.UI.createPicker();
+		var pickerObj = Ti.UI.createPicker({useSpinner: true});
 
 		var data = [];
 		for(var i=0; i<self.opts.data.length; i++) {
