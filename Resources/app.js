@@ -1,3 +1,68 @@
+// TextfieldToggle
+var win = Ti.UI.createWindow({backgroundColor: '#ffffff'});
+
+var editableFields = [];
+var editing = false;
+
+var textfieldToggleModule = require('/components/TextfieldToggle');
+var textfieldToggle = textfieldToggleModule.create({
+	top: 10,
+	left: 10,
+	right: 10,
+	height: 35,
+	value: "Some Text To Edit"
+});
+editableFields.push(textfieldToggle);
+
+var textfieldToggle2 = textfieldToggleModule.create({
+	top: 50,
+	left: 10,
+	right: 10,
+	height: 35,
+	value: "Some Text To Edit 2"
+});
+editableFields.push(textfieldToggle2);
+
+
+win.add(textfieldToggle.getView());
+win.add(textfieldToggle2.getView());
+
+var button = Ti.UI.createButton({
+	title: "Edit",
+	width: 100,
+	height: 40,
+	bottom: 10
+});
+
+button.addEventListener('click', function() {
+	if(editing === false) {
+		editing = true;
+		button.title = "Save";
+		for(var i=0; i<editableFields.length; i++) {
+			editableFields[i].toggleEditMode();	
+		}
+	}
+	else {
+		editing = false;
+		button.title = "Edit";
+		for(var i=0; i<editableFields.length; i++) {
+			editableFields[i].toggleDisplayMode();	
+		}
+		
+		// display new values
+		for(var i=0; i<editableFields.length; i++) {
+			alert(editableFields[i].getValue());	
+		}
+	}
+});
+
+win.add(button);
+
+win.open();
+
+
+/*
+// Custom Picker
 var win = Ti.UI.createWindow({backgroundColor: '#ffffff'});
 
 var data = [
@@ -24,3 +89,4 @@ var picker = pickerModule.create({
 win.add(picker.getView());
 
 win.open();
+*/
