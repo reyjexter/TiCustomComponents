@@ -1,3 +1,6 @@
+/*
+ * Codes used here is based on http://developer.appcelerator.com/question/147272/get-route-on-a-map---solution-not-a-question
+ */
 var DirectionMapViewClass = function(opts) {
 	var self = this;
 	self.opts = opts;
