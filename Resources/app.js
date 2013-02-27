@@ -1,4 +1,19 @@
+// DirectionMapView
+var win = Ti.UI.createWindow({backgroundColor: '#ffffff'});
+
+
+var directionMapViewModule = require('/components/DirectionMapView');
+var directionMapView = directionMapViewModule.create({
+	fromLat: 14.607754,
+	fromLng: 121.098237,
+	toLat: 14.57781,
+	toLng: 121.045411
+});
+win.add(directionMapView.getView());
+
+
 // TextfieldToggle
+/*
 var win = Ti.UI.createWindow({backgroundColor: '#ffffff'});
 
 var editableFields = [];
@@ -57,9 +72,7 @@ button.addEventListener('click', function() {
 });
 
 win.add(button);
-
-win.open();
-
+*/
 
 /*
 // Custom Picker
@@ -87,6 +100,6 @@ var picker = pickerModule.create({
 });
 
 win.add(picker.getView());
+*/
 
 win.open();
-*/
