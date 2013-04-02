@@ -16,7 +16,7 @@ App.UI.PullToRefreshScrollView.create = function(opts, pullToRefreshCallback) {
 	});
 	
 	var arrow = Ti.UI.createView({
-		backgroundImage: App.getImagePath('white-arrow.png'),
+		backgroundImage: '/images/white-arrow.png',
 		width:23,
 		height:60,
 		bottom:10,
