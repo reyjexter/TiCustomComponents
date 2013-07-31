@@ -8,6 +8,9 @@ for(var i=0; i<20; i++) {
 	chatListView.addMessage("This is a message " + i);
 }
 
+setTimeout(function() {
+	chatListView.scrollToBottom();
+}, 300);
 
 /*
 // map with directions

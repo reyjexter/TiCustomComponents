@@ -149,6 +149,12 @@ var ChatListViewClass = function(parent) {
 		}, 300);
 	}
 	
+	self.scrollToBottom = function() {
+		self.scrollViewMessages.scrollToBottom();
+	};
+	
+	
+	
 	self.init();
 	
 	return self;
