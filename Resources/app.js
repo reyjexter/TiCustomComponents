@@ -2,6 +2,15 @@
 var win = Ti.UI.createWindow({backgroundColor: '#ffffff'});
 
 
+// chat list view
+var chatListView = require('components/ChatListView')(win);
+for(var i=0; i<20; i++) {
+	chatListView.addMessage("This is a message " + i);
+}
+
+
+/*
+// map with directions
 var directionMapViewModule = require('/components/DirectionMapView');
 var directionMapView = directionMapViewModule.create({
 	fromLat: 14.607754,
@@ -13,7 +22,6 @@ win.add(directionMapView.getView());
 
 
 // TextfieldToggle
-/*
 var win = Ti.UI.createWindow({backgroundColor: '#ffffff'});
 
 var editableFields = [];
